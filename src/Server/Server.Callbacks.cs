@@ -1,7 +1,7 @@
 namespace SimpleServer
 {
     /// <summary>
-    /// Callbacks to personalize the server behavior
+    /// Callbacks to personalize the server behaviour
     /// </summary>
     public abstract partial class Server
     {
