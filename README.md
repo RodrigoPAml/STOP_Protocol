@@ -141,7 +141,7 @@ All protected members can be turned public
 
 ```C#
   // The lock used to syncronize the server callbacks
-  // You can use it manually if you disable the automatic use
+  // You can use it manually if you disable the automatic use via constructor (syncronizeCallbacks)
   protected object Lock { get; private set; }
 ```
 ### Send
