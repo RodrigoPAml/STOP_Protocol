@@ -323,9 +323,6 @@ With only 1024 buffer size and payload we can see the difference
 14/05/2023 04:51:54 - [Client]: or 118,21428571428571 megabytes per second
 ```
 
-![image](https://github.com/RodrigoPAml/SimpleServer/assets/41243039/19d41341-4684-4a4a-8ce9-aa28495ae800)
-
-
 ### 4 - Sending a object
 In this example the client send a class object to the server
 
