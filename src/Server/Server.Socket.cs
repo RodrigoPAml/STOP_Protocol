@@ -57,7 +57,7 @@ namespace SimpleServer
             if (size == 0)
                 throw new Exception("Recieved empty message");
 
-            return Encoding.UTF8.GetString(buffer, 0, size);
+            return Encoding.ASCII.GetString(buffer, 0, size);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace SimpleServer
 
             NetworkStream stream = client.GetStream();
 
-            byte[] buffer = Encoding.UTF8.GetBytes(data);
+            byte[] buffer = Encoding.ASCII.GetBytes(data);
             stream.Write(buffer, 0, buffer.Length);
         }
     }

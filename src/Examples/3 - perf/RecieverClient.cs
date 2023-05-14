@@ -31,7 +31,7 @@ namespace SimpleServer.Examples
         {
             lock (_lock)
             {
-                _recievedBytes += (ulong)(message.Length * sizeof(char));
+                _recievedBytes += (ulong)(message.Length);
             }
         }
 

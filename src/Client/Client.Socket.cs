@@ -22,7 +22,7 @@ namespace SimpleServer
             if (size == 0)
                 throw new Exception("Read empty message from server");
 
-            return Encoding.UTF8.GetString(buffer, 0, size);
+            return Encoding.ASCII.GetString(buffer, 0, size);
         }
 
         protected void Send(string content)
@@ -34,7 +34,7 @@ namespace SimpleServer
 
             NetworkStream stream = _client.GetStream();
 
-            byte[] buffer = Encoding.UTF8.GetBytes(data);
+            byte[] buffer = Encoding.ASCII.GetBytes(data);
             stream.Write(buffer, 0, buffer.Length);
         }
     }
