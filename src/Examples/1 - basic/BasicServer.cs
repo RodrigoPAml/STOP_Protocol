@@ -8,31 +8,31 @@
 
         protected override void OnServerStart()
         {
-            Logger.Log("[Server]: Comecei de funcionar");
+            Logger.Log("[Server]: Started");
         }
 
         protected override void OnClientConnected(long clientId)
         {
-            Logger.Log($"[Server]: Cliente {clientId} se conectou");
+            Logger.Log($"[Server]: Client {clientId} connected");
         }
 
         protected override void OnClientDisconnected(long clientId)
         {
-            Logger.Log($"[Server]: Cliente {clientId} se desconectou");
+            Logger.Log($"[Server]: Client {clientId} disconnected");
         }
 
         protected override void OnRecieveMessage(long clientId, string message)
         {
-            if(message == "sair")
+            if(message == "exit")
                 this.Stop();
 
-            Logger.Log($"[Server]: Cliente {clientId} mandou mensagem \"{message}\". Mandando de volta");
+            Logger.Log($"[Server]: Client {clientId} send a message: \"{message}\". Sending back");
             this.Send(clientId, message);
         }
 
         protected override void OnServerStop()
         {
-            Logger.Log("[Server]: Parei de funcionar");
+            Logger.Log("[Server]: Stopped");
         }
     }
 }

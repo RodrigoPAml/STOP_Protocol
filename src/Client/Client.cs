@@ -9,7 +9,7 @@ namespace SimpleServer
     public abstract partial class Client
     {
         /// <summary>
-        /// The id provid by the server to this client
+        /// The id provided by the server to this client
         /// </summary>
         protected long Id { get; private set; } = 0;
 
@@ -98,7 +98,7 @@ namespace SimpleServer
         /// Disconnect from the server
         /// </summary>
         /// <param name="waitThread"> Join the client thread if true </param>
-        public void Disconnect(bool waitThread = false)
+        public void Disconnect(bool waitThread = true)
         {
 #if DEBUG
             Logger.Log($"[Client]: Disconnecting from {Host}:{Port}");

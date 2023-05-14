@@ -10,28 +10,28 @@ namespace SimpleServer.Examples
 
         protected override void OnServerStart()
         {
-            Logger.Log("[Server]: Comecei de funcionar");
+            Logger.Log("[Server]: Started");
         }
 
         protected override void OnClientConnected(long clientId)
         {
-            Logger.Log($"[Server]: Cliente {clientId} se conectou");
+            Logger.Log($"[Server]: Client {clientId} connected");
         }
 
         protected override void OnClientDisconnected(long clientId)
         {
-            Logger.Log($"[Server]: Cliente {clientId} se desconectou");
+            Logger.Log($"[Server]: Client {clientId} disconnected");
         }
 
         protected override void OnRecieveMessage(long clientId, string message)
         {
             var people = JsonConvert.DeserializeObject<People>(message);
-            Logger.Log($"[Server]: Cliente {clientId} mandou pessoa \"{people.Name}\"");
+            Logger.Log($"[Server]: Client {clientId} send people \"{people.Name}\"");
         }
 
         protected override void OnServerStop()
         {
-            Logger.Log("[Server]: Parei de funcionar");
+            Logger.Log("[Server]: Stopped");
         }
     }
 }

@@ -4,21 +4,21 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Digite 1 - servidor básico!");
-        Console.WriteLine("Digite 2 - cliente básico!");
+        Console.WriteLine("1 - basic server");
+        Console.WriteLine("2 - basic client");
         Console.WriteLine();
 
-        Console.WriteLine("Digite 3 - servidor do chat!");
-        Console.WriteLine("Digite 4 - cliente do chat!");
+        Console.WriteLine("3 - server chat");
+        Console.WriteLine("4 - client chat");
         Console.WriteLine();
 
-        Console.WriteLine("Digite 5 - servidor de performance!");
-        Console.WriteLine("Digite 6 - cliente envio performance!");
-        Console.WriteLine("Digite 7 - cliente recebimento performance!");
+        Console.WriteLine("5 - performance server");
+        Console.WriteLine("6 - sender client");
+        Console.WriteLine("7 - reciever client");
         Console.WriteLine();
 
-        Console.WriteLine("Digite 8 - servidor recebe objeto!");
-        Console.WriteLine("Digite 9 - cliente envia objeto!");
+        Console.WriteLine("8 - server object");
+        Console.WriteLine("9 - client object");
         Console.WriteLine();
 
         string text = Console.ReadLine();
@@ -69,11 +69,11 @@ class Program
         BasicClient client = new BasicClient(64_000);
         client.Connect("127.0.0.1", 55555);
 
-        Console.WriteLine("Digite e de enter para enviar ao servidor!");
-        Console.WriteLine("Se quer que o servidor finalize digite sair");
+        Console.WriteLine("Type a message to send to the server!");
+        Console.WriteLine("Type exit to end the server and the client");
 
         string text = Console.ReadLine();
-        while (text != "sair")
+        while (text != "exit")
         {
             if (text != null)
                 client.Send(text);
@@ -95,11 +95,11 @@ class Program
         ChatClient client = new ChatClient(64_000);
         client.Connect("127.0.0.1", 55555);
 
-        Console.WriteLine("Digite e de enter para enviar ao servidor!");
-        Console.WriteLine("Para sair digite sair");
+        Console.WriteLine("Type a message to send into the chat!");
+        Console.WriteLine("Type exit to exit the chat");
 
         string text = Console.ReadLine();
-        while (text != "sair")
+        while (text != "exit")
         {
             if (text != null)
                 client.Send(text);
@@ -113,11 +113,11 @@ class Program
     static void Option5()
     {
         // You can change the buffer size to improve performance
-        Console.WriteLine("Digite o tamanho do buffer em bytes: ");
+        Console.WriteLine("Write the buffer size in bytes: ");
         string text = Console.ReadLine();
 
         if (!uint.TryParse(text, out uint bufferSize))
-            bufferSize = 0;
+            bufferSize = 64_000;
 
         PerfServer server = new PerfServer(55555, (int)bufferSize);
         server.Run();
@@ -126,13 +126,13 @@ class Program
     static void Option6()
     {
         // You can change the buffer size and payload size to improve performance
-        Console.WriteLine("Digite o tamanho do buffer em bytes: ");
+        Console.WriteLine("Write the buffer size in bytes: ");
         string text = Console.ReadLine();
 
         if (!uint.TryParse(text, out uint bufferSize))
             bufferSize = 64_000;
 
-        Console.WriteLine("Digite o tamanho do payload (char): ");
+        Console.WriteLine("Write the payload size (in char): ");
         text = Console.ReadLine();
 
         if (!int.TryParse(text, out int payloadSize))
@@ -154,7 +154,7 @@ class Program
     static void Option7()
     {
         // You can change the buffer size to improve performance
-        Console.WriteLine("Digite o tamanho do buffer em bytes: ");
+        Console.WriteLine("Write the buffer size in bytes: ");
         string text = Console.ReadLine();
 
         if (!uint.TryParse(text, out uint bufferSize))
@@ -162,8 +162,6 @@ class Program
 
         RecieverClient reciever = new RecieverClient((int)bufferSize);
         reciever.Connect("127.0.0.1", 55555);
-
-        Console.WriteLine("Mostrando resultados a cada 1 segundo!");
 
         while(true) 
         {

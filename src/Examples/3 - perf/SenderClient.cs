@@ -10,17 +10,22 @@
 
         protected override void OnConnect()
         {
-            Logger.Log($"[Cliente]: Me conectei ao servidor em {Host}:{Port}, meu id é {Id}");
+            Logger.Log($"[Client]: Connected in the server at {Host}:{Port}, my id is {Id}");
         }
 
         protected override void OnDisconnect()
         {
-            Logger.Log($"[Cliente]: Me desconectei do servidor em {Host}:{Port}");
+            Logger.Log($"[Client]: Disconnected from server at {Host}:{Port}");
         }
 
         protected override void OnRecieveMessage(string message)
         {
-            Logger.Log($"[Cliente]: Recebido do servidor em {Host}:{Port} mensagem \"{message}\"");
+            Logger.Log($"[Client]: Recived from server at {Host}:{Port}, message: \"{message}\"");
+        }
+
+        public new void Send(string message)
+        {
+            base.Send(message);
         }
     }
 }

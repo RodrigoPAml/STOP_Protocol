@@ -25,7 +25,7 @@ namespace SimpleServer
             return Encoding.UTF8.GetString(buffer, 0, size);
         }
 
-        public void Send(string content)
+        protected void Send(string content)
         {
             if(content== null) 
                 throw new ArgumentNullException("content is null");  

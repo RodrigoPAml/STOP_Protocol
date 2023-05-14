@@ -16,7 +16,7 @@ namespace SimpleServer.Examples
 
         protected override void OnConnect()
         {
-            Logger.Log($"[Cliente]: Me conectei ao servidor em {Host}:{Port}, meu id é {Id}");
+            Logger.Log($"[Client]: Connected in server at {Host}:{Port}, my id is {Id}");
 
             _watch = new Stopwatch();
             _watch.Start(); 
@@ -24,7 +24,7 @@ namespace SimpleServer.Examples
 
         protected override void OnDisconnect()
         {
-            Logger.Log($"[Cliente]: Me desconectei do servidor em {Host}:{Port}");
+            Logger.Log($"[Client]: Disconnected from server at {Host}:{Port}");
         }
 
         protected override void OnRecieveMessage(string message)
@@ -45,8 +45,8 @@ namespace SimpleServer.Examples
 
             double elapsedTime = (_watch.ElapsedMilliseconds/1000);
 
-            Logger.Log($"[Cliente]: Throughput foi {bytes / elapsedTime} bytes por segundo");
-            Logger.Log($"[Cliente]: ou { (bytes / 1_000_000) / elapsedTime} megabytes por segundo");
+            Logger.Log($"[Client]: Throughput was {bytes / elapsedTime} bytes per second");
+            Logger.Log($"[Client]: or {(bytes / 1_000_000) / elapsedTime} megabytes per second");
         }
     }
 }
