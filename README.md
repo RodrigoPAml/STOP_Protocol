@@ -5,6 +5,8 @@ Simple Server is a server and client implementation over TCP in C# with: UTF-8 m
 
 It's ideal for builindg more complex things on top of it.
 
+The text encoding used can be easily change in the source code if needed.
+
 ## Features
 
   - Customizable server with thread safe operations and UTF-8 comunnication
