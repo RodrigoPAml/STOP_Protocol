@@ -261,64 +261,65 @@ This examples calculates the throughput between two clients, a sender and a reci
 
 With 64000 buffer size and payload
 ```
-14/05/2023 02:46:56 - [Client]: or 743,5 megabytes per second
-14/05/2023 02:46:57 - [Client]: Throughput was 745813333,3333334 bytes per second
-14/05/2023 02:46:57 - [Client]: or 745,6666666666666 megabytes per second
-14/05/2023 02:46:58 - [Client]: Throughput was 747488000 bytes per second
-14/05/2023 02:46:58 - [Client]: or 747,25 megabytes per second
-14/05/2023 02:46:59 - [Client]: Throughput was 748032000 bytes per second
-14/05/2023 02:46:59 - [Client]: or 748 megabytes per second
-14/05/2023 02:47:00 - [Client]: Throughput was 747968000 bytes per second
-14/05/2023 02:47:00 - [Client]: or 747,8333333333334 megabytes per second
-14/05/2023 02:47:01 - [Client]: Throughput was 748324571,4285715 bytes per second
-14/05/2023 02:47:01 - [Client]: or 748,2857142857143 megabytes per second
-14/05/2023 02:47:02 - [Client]: Throughput was 748536000 bytes per second
-14/05/2023 02:47:02 - [Client]: or 748,5 megabytes per second
-14/05/2023 02:47:03 - [Client]: Throughput was 748920888,8888888 bytes per second
-14/05/2023 02:47:03 - [Client]: or 748,8888888888889 megabytes per second
-14/05/2023 02:47:04 - [Client]: Throughput was 748556800 bytes per second
-14/05/2023 02:47:04 - [Client]: or 748,5 megabytes per second
-14/05/2023 02:47:05 - [Client]: Throughput was 749934545,4545455 bytes per second
-14/05/2023 02:47:05 - [Client]: or 749,9090909090909 megabytes per second
-14/05/2023 02:47:06 - [Client]: Throughput was 749349333,3333334 bytes per second
-14/05/2023 02:47:06 - [Client]: or 749,3333333333334 megabytes per second
-14/05/2023 02:47:07 - [Client]: Throughput was 748435692,3076923 bytes per second
-14/05/2023 02:47:07 - [Client]: or 748,3846153846154 megabytes per second
-14/05/2023 02:47:08 - [Client]: Throughput was 747812571,4285715 bytes per second
-14/05/2023 02:47:10 - [Client]: or 747,7857142857143 megabytes per second
-14/05/2023 02:47:11 - [Client]: Throughput was 785688000 bytes per second
-14/05/2023 02:47:11 - [Client]: or 785,6875 megabytes per second
+14/05/2023 04:50:08 - [Client]: Throughput was 433629333,3333333 bytes per second
+14/05/2023 04:50:08 - [Client]: or 433,625 megabytes per second
+14/05/2023 04:50:09 - [Client]: Throughput was 434337280 bytes per second
+14/05/2023 04:50:09 - [Client]: or 434,32 megabytes per second
+14/05/2023 04:50:10 - [Client]: Throughput was 434941538,46153843 bytes per second
+14/05/2023 04:50:10 - [Client]: or 434,9230769230769 megabytes per second
+14/05/2023 04:50:11 - [Client]: Throughput was 434927407,4074074 bytes per second
+14/05/2023 04:50:11 - [Client]: or 434,9259259259259 megabytes per second
+14/05/2023 04:50:12 - [Client]: Throughput was 434160000 bytes per second
+14/05/2023 04:50:12 - [Client]: or 434,14285714285717 megabytes per second
+14/05/2023 04:50:13 - [Client]: Throughput was 434458482,7586207 bytes per second
+14/05/2023 04:50:13 - [Client]: or 434,44827586206895 megabytes per second
+14/05/2023 04:50:14 - [Client]: Throughput was 434030933,3333333 bytes per second
+14/05/2023 04:50:14 - [Client]: or 434 megabytes per second
+14/05/2023 04:50:15 - [Client]: Throughput was 434246193,5483871 bytes per second
+14/05/2023 04:50:15 - [Client]: or 434,2258064516129 megabytes per second
+14/05/2023 04:50:16 - [Client]: Throughput was 434494000 bytes per second
+14/05/2023 04:50:16 - [Client]: or 434,46875 megabytes per second
+14/05/2023 04:50:17 - [Client]: Throughput was 434860606,06060606 bytes per second
+14/05/2023 04:50:17 - [Client]: or 434,8484848484849 megabytes per second
+14/05/2023 04:50:18 - [Client]: Throughput was 434832941,1764706 bytes per second
+14/05/2023 04:50:18 - [Client]: or 434,8235294117647 megabytes per second
+14/05/2023 04:50:19 - [Client]: Throughput was 435274971,4285714 bytes per second
+14/05/2023 04:50:19 - [Client]: or 435,25714285714287 megabytes per second
+14/05/2023 04:50:20 - [Client]: Throughput was 435603555,5555556 bytes per second
+14/05/2023 04:50:23 - [Client]: or 435,5833333333333 megabytes per second
+14/05/2023 04:50:24 - [Client]: Throughput was 438027487,17948717 bytes per second
+14/05/2023 04:50:24 - [Client]: or 438,02564102564105 megabytes per second
 ```
 
 With only 1024 buffer size and payload we can see the difference
 ```
-14/05/2023 02:50:02 - [Client]: Connected in server at 127.0.0.1:55555, my id is 2
-14/05/2023 02:50:03 - [Client]: Throughput was 141268992 bytes per second
-14/05/2023 02:50:03 - [Client]: or 141 megabytes per second
-14/05/2023 02:50:04 - [Client]: Throughput was 139730432 bytes per second
-14/05/2023 02:50:04 - [Client]: or 139,5 megabytes per second
-14/05/2023 02:50:05 - [Client]: Throughput was 139813205,33333334 bytes per second
-14/05/2023 02:50:05 - [Client]: or 139,66666666666666 megabytes per second
-14/05/2023 02:50:06 - [Client]: Throughput was 139462656 bytes per second
-14/05/2023 02:50:06 - [Client]: or 139,25 megabytes per second
-14/05/2023 02:50:07 - [Client]: Throughput was 139188428,8 bytes per second
-14/05/2023 02:50:07 - [Client]: or 139 megabytes per second
-14/05/2023 02:50:08 - [Client]: Throughput was 138722304 bytes per second
-14/05/2023 02:50:08 - [Client]: or 138,66666666666666 megabytes per second
-14/05/2023 02:50:09 - [Client]: Throughput was 138613028,57142857 bytes per second
-14/05/2023 02:50:09 - [Client]: or 138,57142857142858 megabytes per second
-14/05/2023 02:50:10 - [Client]: Throughput was 138498688 bytes per second
-14/05/2023 02:50:10 - [Client]: or 138,375 megabytes per second
-14/05/2023 02:50:11 - [Client]: Throughput was 138360832 bytes per second
-14/05/2023 02:50:11 - [Client]: or 138,33333333333334 megabytes per second
-14/05/2023 02:50:12 - [Client]: Throughput was 138553446,4 bytes per second
-14/05/2023 02:50:12 - [Client]: or 138,5 megabytes per second
-14/05/2023 02:50:13 - [Client]: Throughput was 138551668,36363637 bytes per second
-14/05/2023 02:50:13 - [Client]: or 138,54545454545453 megabytes per second
-14/05/2023 02:50:14 - [Client]: Throughput was 138631594,66666666 bytes per second
-14/05/2023 02:50:14 - [Client]: or 138,58333333333334 megabytes per second
-14/05/2023 02:50:15 - [Client]: Throughput was 138685597,53846154 bytes per second
-14/05/2023 02:50:15 - [Client]: or 138,6153846153846 megabytes per second
+14/05/2023 04:51:41 - [Client]: or 118,20689655172414 megabytes per second
+14/05/2023 04:51:42 - [Client]: Throughput was 118237866,66666667 bytes per second
+14/05/2023 04:51:42 - [Client]: or 118,23333333333333 megabytes per second
+14/05/2023 04:51:43 - [Client]: Throughput was 118218619,87096775 bytes per second
+14/05/2023 04:51:43 - [Client]: or 118,19354838709677 megabytes per second
+14/05/2023 04:51:44 - [Client]: Throughput was 118123840 bytes per second
+14/05/2023 04:51:44 - [Client]: or 118,09375 megabytes per second
+14/05/2023 04:51:45 - [Client]: Throughput was 118111821,57575758 bytes per second
+14/05/2023 04:51:45 - [Client]: or 118,0909090909091 megabytes per second
+14/05/2023 04:51:46 - [Client]: Throughput was 118154631,52941176 bytes per second
+14/05/2023 04:51:46 - [Client]: or 118,1470588235294 megabytes per second
+14/05/2023 04:51:47 - [Client]: Throughput was 118151753,14285715 bytes per second
+14/05/2023 04:51:47 - [Client]: or 118,14285714285714 megabytes per second
+14/05/2023 04:51:48 - [Client]: Throughput was 118155264 bytes per second
+14/05/2023 04:51:48 - [Client]: or 118,13888888888889 megabytes per second
+14/05/2023 04:51:49 - [Client]: Throughput was 118186675,8918919 bytes per second
+14/05/2023 04:51:49 - [Client]: or 118,16216216216216 megabytes per second
+14/05/2023 04:51:50 - [Client]: Throughput was 118236914,5263158 bytes per second
+14/05/2023 04:51:50 - [Client]: or 118,23684210526316 megabytes per second
+14/05/2023 04:51:51 - [Client]: Throughput was 118259449,43589744 bytes per second
+14/05/2023 04:51:51 - [Client]: or 118,25641025641026 megabytes per second
+14/05/2023 04:51:52 - [Client]: Throughput was 118267494,4 bytes per second
+14/05/2023 04:51:52 - [Client]: or 118,25 megabytes per second
+14/05/2023 04:51:53 - [Client]: Throughput was 118227893,07317074 bytes per second
+14/05/2023 04:51:53 - [Client]: or 118,21951219512195 megabytes per second
+14/05/2023 04:51:54 - [Client]: Throughput was 118235769,90476191 bytes per second
+14/05/2023 04:51:54 - [Client]: or 118,21428571428571 megabytes per second
 ```
 
 ### 4 - Sending a object
