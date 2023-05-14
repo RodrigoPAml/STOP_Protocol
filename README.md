@@ -37,7 +37,7 @@ public class ExampleServer : Server
         Logger.Log($"[Server]: Client {clientId} connected");
     }
 
-    protected override void OnClientDisconnected(long clientId)
+    protected override void OnClientDisconnected(long clientId, Exception e)
     {
         Logger.Log($"[Server]: Client {clientId} disconnected");
     }
@@ -78,7 +78,7 @@ public class ExampleClient : Client
         Logger.Log($"[Client]: Connected into the server in {Host}:{Port} with id {Id}");
     }
 
-    protected override void OnDisconnect()
+    protected override void OnDisconnect(Exception e)
     {
         Logger.Log($"[Client]: Disconnected from server in {Host}:{Port}");
     }
