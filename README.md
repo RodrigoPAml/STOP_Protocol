@@ -247,6 +247,7 @@ string data = $"BEG{(content.Length + 16).ToString("D10")}" + content + "END";
 - SSL TCP Connection
 - Possibility to send UDP packets
 - Use a ThreadPool instead of one thread per client to improve performance
+- Performance test over LAN
 
 ## Examples
 
