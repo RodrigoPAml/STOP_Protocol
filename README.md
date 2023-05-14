@@ -259,7 +259,7 @@ This examples calculates the throughput between two clients, a sender and a reci
 
 #### Local host tests
 
-With 64000 buffer size and 32000 length string payload (1 char is 2 bytes)
+With 64000 buffer size and payload
 ```
 14/05/2023 02:46:56 - [Client]: or 743,5 megabytes per second
 14/05/2023 02:46:57 - [Client]: Throughput was 745813333,3333334 bytes per second
@@ -290,7 +290,7 @@ With 64000 buffer size and 32000 length string payload (1 char is 2 bytes)
 14/05/2023 02:47:11 - [Client]: or 785,6875 megabytes per second
 ```
 
-With only 1024 buffer size and 512 string payload size we can see the difference
+With only 1024 buffer size and payload we can see the difference
 ```
 14/05/2023 02:50:02 - [Client]: Connected in server at 127.0.0.1:55555, my id is 2
 14/05/2023 02:50:03 - [Client]: Throughput was 141268992 bytes per second
