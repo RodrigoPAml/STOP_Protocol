@@ -232,7 +232,7 @@ All protected members can be turned public
 
 ## Implemeting a client for the server in other language
 
-The layout to send a message to server is a UTF-8 message in the format "BEG" + message size with 10 chars + message + "END"
+The layout to send a message to server is a UTF-8 message in the format "BEG" + message size with 10 chars + message + "END".
 When connected into the server it will return an id for the client and then start listening for the client messages
 
 ```C#
@@ -253,6 +253,71 @@ In this example the client send a message to the server and then  the server ret
 This example simulates a chat between the clients
 ### 3 - Performance
 This examples calculates the throughput between two clients, a sender and a reciever
+
+#### Local host tests
+
+With 64000 buffer size and 32000 length string payload (1 char is 2 bytes)
+```
+14/05/2023 02:46:56 - [Client]: or 743,5 megabytes per second
+14/05/2023 02:46:57 - [Client]: Throughput was 745813333,3333334 bytes per second
+14/05/2023 02:46:57 - [Client]: or 745,6666666666666 megabytes per second
+14/05/2023 02:46:58 - [Client]: Throughput was 747488000 bytes per second
+14/05/2023 02:46:58 - [Client]: or 747,25 megabytes per second
+14/05/2023 02:46:59 - [Client]: Throughput was 748032000 bytes per second
+14/05/2023 02:46:59 - [Client]: or 748 megabytes per second
+14/05/2023 02:47:00 - [Client]: Throughput was 747968000 bytes per second
+14/05/2023 02:47:00 - [Client]: or 747,8333333333334 megabytes per second
+14/05/2023 02:47:01 - [Client]: Throughput was 748324571,4285715 bytes per second
+14/05/2023 02:47:01 - [Client]: or 748,2857142857143 megabytes per second
+14/05/2023 02:47:02 - [Client]: Throughput was 748536000 bytes per second
+14/05/2023 02:47:02 - [Client]: or 748,5 megabytes per second
+14/05/2023 02:47:03 - [Client]: Throughput was 748920888,8888888 bytes per second
+14/05/2023 02:47:03 - [Client]: or 748,8888888888889 megabytes per second
+14/05/2023 02:47:04 - [Client]: Throughput was 748556800 bytes per second
+14/05/2023 02:47:04 - [Client]: or 748,5 megabytes per second
+14/05/2023 02:47:05 - [Client]: Throughput was 749934545,4545455 bytes per second
+14/05/2023 02:47:05 - [Client]: or 749,9090909090909 megabytes per second
+14/05/2023 02:47:06 - [Client]: Throughput was 749349333,3333334 bytes per second
+14/05/2023 02:47:06 - [Client]: or 749,3333333333334 megabytes per second
+14/05/2023 02:47:07 - [Client]: Throughput was 748435692,3076923 bytes per second
+14/05/2023 02:47:07 - [Client]: or 748,3846153846154 megabytes per second
+14/05/2023 02:47:08 - [Client]: Throughput was 747812571,4285715 bytes per second
+14/05/2023 02:47:10 - [Client]: or 747,7857142857143 megabytes per second
+14/05/2023 02:47:11 - [Client]: Throughput was 785688000 bytes per second
+14/05/2023 02:47:11 - [Client]: or 785,6875 megabytes per second
+```
+
+With only 1024 buffer size and 512 string payload size we can see the difference
+```
+14/05/2023 02:50:02 - [Client]: Connected in server at 127.0.0.1:55555, my id is 2
+14/05/2023 02:50:03 - [Client]: Throughput was 141268992 bytes per second
+14/05/2023 02:50:03 - [Client]: or 141 megabytes per second
+14/05/2023 02:50:04 - [Client]: Throughput was 139730432 bytes per second
+14/05/2023 02:50:04 - [Client]: or 139,5 megabytes per second
+14/05/2023 02:50:05 - [Client]: Throughput was 139813205,33333334 bytes per second
+14/05/2023 02:50:05 - [Client]: or 139,66666666666666 megabytes per second
+14/05/2023 02:50:06 - [Client]: Throughput was 139462656 bytes per second
+14/05/2023 02:50:06 - [Client]: or 139,25 megabytes per second
+14/05/2023 02:50:07 - [Client]: Throughput was 139188428,8 bytes per second
+14/05/2023 02:50:07 - [Client]: or 139 megabytes per second
+14/05/2023 02:50:08 - [Client]: Throughput was 138722304 bytes per second
+14/05/2023 02:50:08 - [Client]: or 138,66666666666666 megabytes per second
+14/05/2023 02:50:09 - [Client]: Throughput was 138613028,57142857 bytes per second
+14/05/2023 02:50:09 - [Client]: or 138,57142857142858 megabytes per second
+14/05/2023 02:50:10 - [Client]: Throughput was 138498688 bytes per second
+14/05/2023 02:50:10 - [Client]: or 138,375 megabytes per second
+14/05/2023 02:50:11 - [Client]: Throughput was 138360832 bytes per second
+14/05/2023 02:50:11 - [Client]: or 138,33333333333334 megabytes per second
+14/05/2023 02:50:12 - [Client]: Throughput was 138553446,4 bytes per second
+14/05/2023 02:50:12 - [Client]: or 138,5 megabytes per second
+14/05/2023 02:50:13 - [Client]: Throughput was 138551668,36363637 bytes per second
+14/05/2023 02:50:13 - [Client]: or 138,54545454545453 megabytes per second
+14/05/2023 02:50:14 - [Client]: Throughput was 138631594,66666666 bytes per second
+14/05/2023 02:50:14 - [Client]: or 138,58333333333334 megabytes per second
+14/05/2023 02:50:15 - [Client]: Throughput was 138685597,53846154 bytes per second
+14/05/2023 02:50:15 - [Client]: or 138,6153846153846 megabytes per second
+```
+
 ### 4 - Sending a object
 This examples the client send a class object to the server
 
