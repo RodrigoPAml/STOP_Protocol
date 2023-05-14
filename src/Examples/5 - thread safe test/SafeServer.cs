@@ -20,14 +20,14 @@
 
         protected override void OnClientDisconnected(long clientId, Exception e)
         {
-            Logger.Log($"[Server]: Client {clientId} disconnected {e?.Message}");
+            Logger.Log($"[Server]: Client {clientId} disconnected");
         }
 
         protected override void OnRecieveMessage(long clientId, string message)
         {
             _value++;
 
-            Logger.Log($"[Server]: Value is {_value} {message}");
+            Logger.Log($"[Server]: Value is {_value}");
         }
 
         protected override void OnServerStop()

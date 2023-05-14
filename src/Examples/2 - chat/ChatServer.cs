@@ -33,7 +33,7 @@
             foreach (var client in _initilizedClients)
                 this.Send(client, $"Client {clientId} left the chat");
 
-            Logger.Log($"[Server]: Client {clientId} left {e?.Message}");
+            Logger.Log($"[Server]: Client {clientId} left");
         }
 
         protected override void OnRecieveMessage(long clientId, string message)
