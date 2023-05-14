@@ -10,7 +10,7 @@ namespace SimpleServer
         /// <summary>
         /// When the disconnect from server
         /// </summary>
-        protected abstract void OnDisconnect();
+        protected abstract void OnDisconnect(Exception e);
 
         /// <summary>
         /// When the recieves a message from server

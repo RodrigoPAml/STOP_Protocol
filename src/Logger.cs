@@ -11,7 +11,7 @@
 
             Console.WriteLine($"{DateTime.Now} - {message}");
 
-            writer.Write($"{DateTime.Now} - {message}");
+            writer.Write($"{DateTime.Now} - {message}\n");
             writer.Flush();
         }
     }

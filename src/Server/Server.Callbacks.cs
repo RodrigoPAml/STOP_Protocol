@@ -24,7 +24,7 @@ namespace SimpleServer
         /// <summary>
         /// Called when a client is disconnected
         /// </summary>
-        protected abstract void OnClientDisconnected(long clientId);
+        protected abstract void OnClientDisconnected(long clientId, Exception exception);
 
         /// <summary>
         /// Called when the server recieves a message from a client

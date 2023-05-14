@@ -1,11 +1,9 @@
 ﻿namespace SimpleServer.Examples
 {
-    public class SenderClient : Client
+    public class SafeClient : Client
     {
-        public new bool IsConnected => base.IsConnected;
-
-        public SenderClient(int bufferSize) : base(bufferSize) 
-        { 
+        public SafeClient(int bufferSize) : base(bufferSize)
+        {
         }
 
         protected override void OnConnect()
@@ -20,12 +18,11 @@
 
         protected override void OnRecieveMessage(string message)
         {
-            Logger.Log($"[Client]: Recived from server at {Host}:{Port}, message: \"{message}\"");
         }
 
-        public new void Send(string message)
+        public new void Send(string content)
         {
-            base.Send(message);
+            base.Send(content);
         }
     }
 }

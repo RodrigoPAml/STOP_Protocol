@@ -30,18 +30,18 @@ namespace SimpleServer
             RawData += data;
 
             // Wait for header
-            if (!HasHeader && data.Length >= 3)
+            if (!HasHeader && RawData.Length >= 3)
             {
-                if (!data.StartsWith("BEG"))
+                if (!RawData.StartsWith("BEG"))
                     throw new Exception("Recieved an invalid packet format");
 
                 HasHeader = true;
             }
 
             // Wait for size, has the max int lenght (2147483647) with is 10
-            if (!HasSize && data.Length >= 13)
+            if (!HasSize && RawData.Length >= 13)
             {
-                if (!int.TryParse(data.Substring(3, 10), out int size))
+                if (!int.TryParse(RawData.Substring(3, 10), out int size))
                     throw new Exception("Recieved an invalid packet size");
 
                 ExpectedSize = size;

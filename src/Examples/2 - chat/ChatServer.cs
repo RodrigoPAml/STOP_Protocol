@@ -26,14 +26,14 @@
             Logger.Log($"[Server]: Client {clientId} enter the chat");
         }
 
-        protected override void OnClientDisconnected(long clientId)
+        protected override void OnClientDisconnected(long clientId, Exception e)
         {
             _initilizedClients.Remove(clientId);
 
             foreach (var client in _initilizedClients)
                 this.Send(client, $"Client {clientId} left the chat");
 
-            Logger.Log($"[Server]: Client {clientId} left");
+            Logger.Log($"[Server]: Client {clientId} left {e?.Message}");
         }
 
         protected override void OnRecieveMessage(long clientId, string message)

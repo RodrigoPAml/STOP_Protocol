@@ -13,7 +13,7 @@ namespace SimpleServer.Examples
             Logger.Log($"[Client]: Connected in the server at {Host}:{Port}, my id is {Id}");
         }
 
-        protected override void OnDisconnect()
+        protected override void OnDisconnect(Exception e)
         {
             Logger.Log($"[Client]: Disconnected in the server at {Host}:{Port}");
         }

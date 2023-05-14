@@ -203,7 +203,7 @@ namespace SimpleServer
 #endif
                     try
                     {
-                        OnDisconnect();
+                        OnDisconnect(e);
                     }
                     catch (Exception ex)
                     {

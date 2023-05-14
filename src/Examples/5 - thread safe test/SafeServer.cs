@@ -1,8 +1,10 @@
 ﻿namespace SimpleServer.Examples
 {
-    public class PerfServer : Server
+    public class SafeServer : Server
     {
-        public PerfServer(int port, int bufferSize) : base(port, bufferSize)
+        private int _value = 0;
+
+        public SafeServer(int port, int bufferSize, bool safe) : base(port, bufferSize, safe)
         {
         }
 
@@ -23,10 +25,9 @@
 
         protected override void OnRecieveMessage(long clientId, string message)
         {
-            if(ConnectedClients.Count > 1)
-            {
-                this.Send(ConnectedClients[1], message);
-            }
+            _value++;
+
+            Logger.Log($"[Server]: Value is {_value} {message}");
         }
 
         protected override void OnServerStop()

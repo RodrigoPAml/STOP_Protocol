@@ -18,9 +18,9 @@ namespace SimpleServer.Examples
             Logger.Log($"[Server]: Client {clientId} connected");
         }
 
-        protected override void OnClientDisconnected(long clientId)
+        protected override void OnClientDisconnected(long clientId, Exception e)
         {
-            Logger.Log($"[Server]: Client {clientId} disconnected");
+            Logger.Log($"[Server]: Client {clientId} disconnected {e?.Message}");
         }
 
         protected override void OnRecieveMessage(long clientId, string message)

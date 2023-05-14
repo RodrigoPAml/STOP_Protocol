@@ -21,6 +21,10 @@ class Program
         Console.WriteLine("9 - client object");
         Console.WriteLine();
 
+        Console.WriteLine("10 - server safe test");
+        Console.WriteLine("11 - client");
+        Console.WriteLine();
+
         string text = Console.ReadLine();
 
         if (!int.TryParse(text, out int number))
@@ -54,6 +58,12 @@ class Program
                 break;
             case 9:
                 Option9();
+                break;
+            case 10:
+                Option10();
+                break;
+            case 11:
+                Option11();
                 break;
         }
     }
@@ -188,5 +198,39 @@ class Program
 
         client.Disconnect(true);
         Console.ReadLine();
+    }
+
+    static void Option10()
+    {
+        // Change the boolean to see the thread safety difference
+        SafeServer server = new SafeServer(55555, 64_000, true);
+        server.Run();
+    }
+
+    static void Option11()
+    {
+        try
+        {
+            SafeClient client = new SafeClient(64_000);
+            client.Connect("127.0.0.1", 55555);
+
+            for (int i = 0; i < 100000; i++)
+            {
+                client.Send($"dummy{i}");
+            }
+
+            Console.ReadLine();
+            client.Disconnect(true);
+
+            Console.ReadLine();
+            Console.ReadLine();
+            Console.ReadLine();
+            Console.ReadLine();
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);  
+        }
+      
     }
 }

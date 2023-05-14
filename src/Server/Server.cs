@@ -99,7 +99,7 @@ namespace SimpleServer
         /// <param name="port"> Port to listen </param>
         /// <param name="bufferSize"> Buffer size for each client in bytes </param>
         /// <param name="syncronizeCallbacks"> If callback will be auto sincronized via lock </param>
-        public Server(int port, int bufferSize = 4096, bool syncronizeCallbacks = true)
+        public Server(int port, int bufferSize = 64_000, bool syncronizeCallbacks = true)
         {
             _server = new TcpListener(new IPEndPoint(IPAddress.Any, port));
 
@@ -205,9 +205,9 @@ namespace SimpleServer
                     {
                         if (SyncronizedCallbacks)
                             lock (Lock)
-                                OnClientDisconnected(clientId);
+                                OnClientDisconnected(clientId, e);
                         else
-                            OnClientDisconnected(clientId);
+                            OnClientDisconnected(clientId, e);
                     }
                     catch (Exception ex)
                     {
@@ -232,9 +232,9 @@ namespace SimpleServer
             {
                 if (SyncronizedCallbacks)
                     lock (Lock)
-                        OnClientDisconnected(clientId);
+                        OnClientDisconnected(clientId, null);
                 else
-                    OnClientDisconnected(clientId);
+                    OnClientDisconnected(clientId, null);
             }
             catch (Exception ex)
             {
