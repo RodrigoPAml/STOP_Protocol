@@ -209,28 +209,18 @@ class Program
 
     static void Option11()
     {
-        try
+        Thread.Sleep(1000);
+
+        SafeClient client = new SafeClient(64_000);
+        client.Connect("127.0.0.1", 55555);
+
+        for (int i = 0; i < 200000; i++)
         {
-            SafeClient client = new SafeClient(64_000);
-            client.Connect("127.0.0.1", 55555);
-
-            for (int i = 0; i < 100000; i++)
-            {
-                client.Send($"dummy{i}");
-            }
-
-            Console.ReadLine();
-            client.Disconnect(true);
-
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
+            client.Send($"dummy{i}");
         }
-        catch(Exception ex)
-        {
-            Console.WriteLine(ex.Message);  
-        }
-      
+
+        Console.ReadLine();
+        client.Disconnect(true);
+        Console.ReadLine();
     }
 }
