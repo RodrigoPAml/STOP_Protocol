@@ -324,5 +324,6 @@ In this example the client send a class object to the server
 ### 5 - Thread safe test
 
 In this example many clients increment a value in the server to test if the operations are thread safe
+
 You can change the bool in the server class to see the difference
 
