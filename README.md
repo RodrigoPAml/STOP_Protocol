@@ -232,7 +232,7 @@ All protected members can be turned public
 
 ## Implemeting a client for the server in other language
 
-The layout to send a message to server is a UTF-8 message in the format "BEG" + message size with 10 chars + message + "END"
+The layout to send a message to server is a UTF-8 message in the format "BEG" + message size with 10 chars + message + "END".
 When connected into the server it will return an id for the client and then start listening for the client messages
 
 ```C#
