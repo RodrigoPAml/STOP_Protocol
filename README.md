@@ -1,8 +1,8 @@
 # Simple Server
 
 ## Description
-Simple Server is a server and client implementation over TCP in C# with UTF-8 message based comunication, client identification and safe thread operations
-It's ideal for builindg more complex thing on top of it.
+Simple Server is a server and client implementation over TCP in C# with: UTF-8 message based comunication, client identification and safe thread operations
+It's ideal for builindg more complex things on top of it.
 
 ## Features
 
