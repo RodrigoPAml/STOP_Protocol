@@ -9,7 +9,7 @@ The text encoding used is ASCII but can be changed in the source code if needed.
 
 ## Features
 
-  - Customizable server with thread safe operations and UTF-8 comunnication
+  - Customizable server with thread safe operations and ASCII comunnication
   - Each client is identified with an id provided by the server
   - Customizable client
 
@@ -235,7 +235,7 @@ All protected members can be turned public
 
 ## Implemeting a client for the server in other language
 
-The layout to send a message to server is a UTF-8 message in the format "BEG" + message size with 10 chars + message + "END".
+The layout to send a message to server is a ASCII message in the format "BEG" + message size with 10 chars + message + "END".
 When connected into the server it will return an id for the client and then start listening for the client messages
 
 ```C#
