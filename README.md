@@ -296,6 +296,8 @@ With only 1024 buffer size and payload we can see the difference
 14/05/2023 04:51:54 - [Client]: Throughput was 118,21428571428571 megabytes per second
 ```
 
+![image](https://github.com/RodrigoPAml/SimpleServer/assets/41243039/95618d8d-b9a1-43a9-9c58-a0c59e92959c)
+
 ### 4 - Sending a object
 In this example the client send a class object to the server
 
