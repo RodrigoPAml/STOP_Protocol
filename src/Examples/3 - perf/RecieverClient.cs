@@ -45,8 +45,7 @@ namespace SimpleServer.Examples
 
             double elapsedTime = (_watch.ElapsedMilliseconds/1000);
 
-            Logger.Log($"[Client]: Throughput was {bytes / elapsedTime} bytes per second");
-            Logger.Log($"[Client]: or {(bytes / 1_000_000) / elapsedTime} megabytes per second");
+            Logger.Log($"[Client]: Throughput was {(bytes / 1_000_000) / elapsedTime} megabytes per second");
         }
     }
 }
