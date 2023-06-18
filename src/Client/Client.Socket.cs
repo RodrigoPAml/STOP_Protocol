@@ -1,7 +1,7 @@
 using System.Net.Sockets;
 using System.Text;
 
-namespace SimpleServer
+namespace STOP
 {
     public abstract partial class Client
     {

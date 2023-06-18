@@ -1,4 +1,4 @@
-namespace SimpleServer
+namespace STOP
 {
     /// <summary>
     /// Callbacks to personalize the server behaviour

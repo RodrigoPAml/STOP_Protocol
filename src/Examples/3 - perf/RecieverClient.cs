@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace SimpleServer.Examples
+namespace STOP.Examples
 {
     public class RecieverClient : Client
     {

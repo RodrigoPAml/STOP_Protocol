@@ -1,7 +1,7 @@
 using System.Net;
 using System.Net.Sockets;
 
-namespace SimpleServer
+namespace STOP
 {
     /// <summary>
     /// Implementation of a customizable server 

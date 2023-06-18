@@ -1,4 +1,4 @@
-﻿namespace SimpleServer
+﻿namespace STOP
 {
     public static class Logger
     {

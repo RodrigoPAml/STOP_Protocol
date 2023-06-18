@@ -3,9 +3,6 @@
 ################################################################################
 
 /obj
-/.vs/SimpleServer/FileContentIndex
-/bin/Release/net6.0
-/.vs/SimpleServer/v17
-/bin/Debug/net6.0
-/.vs/SimpleServer/DesignTimeBuild
-/.vs/ProjectEvaluation
+/.vs
+/bin
+/bin

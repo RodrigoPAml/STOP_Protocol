@@ -1,6 +1,6 @@
 using System.Net.Sockets;
 
-namespace SimpleServer
+namespace STOP
 {
     /// <summary>
     /// Functions provided by the server

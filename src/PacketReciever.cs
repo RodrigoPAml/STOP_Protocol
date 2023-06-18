@@ -1,4 +1,4 @@
-namespace SimpleServer
+namespace STOP
 {
     /// <summary>
     /// Class to handle the recieve of a message

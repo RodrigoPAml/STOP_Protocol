@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace SimpleServer.Examples
+namespace STOP.Examples
 {
     public class ObjectClient : Client
     {

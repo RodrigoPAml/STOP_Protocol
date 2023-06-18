@@ -1,4 +1,4 @@
-﻿namespace SimpleServer.Examples
+﻿namespace STOP.Examples
 {
     public class ChatServer : Server
     {
