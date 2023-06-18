@@ -1,7 +1,7 @@
-# Simple Server
+# STOP  (Simple Text Oriented Protocol)
 
 ## Description
-Simple Server is a server and client implementation over TCP in C# with: text based comunication, client identification and safe thread operations
+STOP is a server and client implementation over TCP in C# with: text based comunication, client identification and safe thread operations
 
 It's ideal for builindg more complex things on top of it and in an agile way.
 
