@@ -103,7 +103,7 @@ When connected into the server it will return an id for the client and then star
 string data = $"BEG{(content.Length + 16).ToString("D10")}" + content + "END";
 ```
 
-## Improvements
+## Possible Improvements
 
 - SSL TCP Connection
 - Possibility to send UDP packets
