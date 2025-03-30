@@ -1,9 +1,10 @@
 # STOP  (Simple Text Oriented Protocol)
 
 ## Description
+
 STOP is a server and client implementation over TCP in C# with: text based comunication, client identification and safe thread operations
 
-It's ideal for builindg more complex things on top of it and in an agile way.
+It was built for studies porpuses but it's useful for builindg more complex things on top of it.
 
 The text encoding used is ASCII but can be changed in the source code if needed.
 
