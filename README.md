@@ -13,7 +13,6 @@ The text encoding used is ASCII but can be changed in the source code if needed.
   - Customizable server with thread safe operations and ASCII comunnication
   - Each client is identified with an id provided by the server
   - Customizable client
-  - Endianness treatment
 
 ## Usage of custom server
 
